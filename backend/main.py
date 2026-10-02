@@ -13,11 +13,15 @@ app = FastAPI(title="Threat Trailer Engine")
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],   # tighten to your frontend's origin before deploying
+    # Wildcard hata kar exact URL daal, bina trailing slash ke
+    allow_origins=[
+        "http://localhost:3000",
+        "https://threat-trailer-app.onrender.com" 
+    ],
+    allow_credentials=True, # Ise True kar de
     allow_methods=["*"],
     allow_headers=["*"],
 )
-
 
 class DetonationRequest(BaseModel):
     url: HttpUrl
