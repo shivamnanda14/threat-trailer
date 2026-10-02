@@ -20,7 +20,7 @@ chrome.action.onClicked.addListener(async (tab) => {
     setTimeout(() => {
       chrome.runtime.sendMessage({
         action: "update-iframe",
-        url: `http://https://threat-trailer-app.onrender.com/?url=${suspiciousUrl}`
+        url: `https://threat-trailer-app.onrender.com/?url=${suspiciousUrl}`
       });
     }, 1500);
   }
@@ -39,7 +39,7 @@ chrome.contextMenus.onClicked.addListener(async (info, tab) => {
       setTimeout(() => {
         chrome.runtime.sendMessage({
           action: "update-iframe",
-          url: `http://https://threat-trailer-app.onrender.com/?url=${suspiciousUrl}`
+          url: `https://threat-trailer-app.onrender.com/?url=${suspiciousUrl}`
         });
       }, 1500);
     }

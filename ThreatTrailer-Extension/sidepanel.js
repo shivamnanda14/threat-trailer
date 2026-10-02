@@ -1,7 +1,7 @@
 const iframe = document.getElementById('threat-frame');
 
 // Initial load - point to dashboard without URL
-iframe.src = "http://https://threat-trailer-app.onrender.com/";
+iframe.src = "https://threat-trailer-app.onrender.com/";
 
 // Listen for messages from background.js
 chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
