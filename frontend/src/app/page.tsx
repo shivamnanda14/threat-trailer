@@ -29,7 +29,7 @@ export default function ThreatTrailer() {
   const [data, setData] = useState<any>(null);
   const [error, setError] = useState<string | null>(null);
   const autoRan = useRef(false);
-
+  const [showVideo, setShowVideo] = useState(false);
   // Scan-phase ticker (scans are longer now because of interaction, so 5 phases @ 3s)
   useEffect(() => {
     let interval: NodeJS.Timeout;
@@ -283,6 +283,60 @@ export default function ThreatTrailer() {
               <p className="text-sm text-text-secondary">No cyber-jargon. We tell you exactly what would happen to your phone or laptop.</p>
             </div>
           </div>
+
+          {/* Buttons Section (Grid ke bahar rakha hai taaki center me theek se dikhe) */}
+          <div className="flex flex-wrap justify-center items-center gap-4 mt-12 w-full">
+            {/* Primary Button: Get Extension */}
+            <a
+              href="GITHUB_WALA_LINK_YAHAN_DAAL"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="whitespace-nowrap inline-flex items-center gap-2 bg-slate-600 hover:bg-slate-500 text-white font-semibold py-3 px-6 rounded-lg transition-colors border border-slate-500"
+            >
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+              </svg>
+              Get Extension
+            </a>
+
+            {/* Secondary Button: Watch Tutorial */}
+            <button
+              onClick={() => setShowVideo(true)}
+              className="whitespace-nowrap inline-flex items-center gap-2 bg-transparent hover:bg-white/5 text-white font-semibold py-3 px-6 rounded-lg transition-colors border border-white/20 hover:border-white/40 cursor-pointer"
+            >
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              Watch 30s Setup Guide
+            </button>
+          </div>
+
+          {/* Video Modal Overlay */}
+          {showVideo && (
+            <div className="fixed inset-0 z-[100] flex items-center justify-center bg-black/80 backdrop-blur-sm p-4">
+              <div className="relative w-full max-w-4xl bg-[#111318] rounded-xl border border-slate-700 shadow-2xl overflow-hidden p-2">
+                {/* Close Button */}
+                <button 
+                  onClick={() => setShowVideo(false)}
+                  className="absolute top-4 right-4 z-10 bg-black/50 hover:bg-red-500 text-white rounded-full p-2 transition-colors cursor-pointer"
+                >
+                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+                </button>
+                
+                {/* Video Player */}
+                <video 
+                  controls 
+                  autoPlay 
+                  className="w-full h-auto max-h-[80vh] rounded-lg"
+                >
+                  <source src="https://github.com/user-attachments/assets/824188c7-f115-4a9a-bf31-5510079b8f7d" type="video/mp4" />
+                </video>
+              </div>
+            </div>
+          )}
         </div>
       )}
 
