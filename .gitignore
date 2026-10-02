@@ -1,0 +1,56 @@
+# ========================
+# NEXT.JS FRONTEND IGNORES
+# ========================
+# dependencies
+/frontend/node_modules
+/.pnp
+.pnp.js
+
+# testing
+/coverage
+
+# next.js
+/frontend/.next/
+/frontend/out/
+
+# production
+/frontend/build
+
+# misc
+.DS_Store
+*.pem
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# local env files (CRITICAL!)
+/frontend/.env
+/frontend/.env*.local
+/frontend/.env.development.local
+/frontend/.env.test.local
+/frontend/.env.production.local
+
+# ========================
+# PYTHON BACKEND IGNORES
+# ========================
+# Byte-compiled / optimized / DLL files
+/backend/__pycache__/
+*.py[cod]
+*$py.class
+
+# Environments
+/backend/venv/
+/backend/env/
+/backend/.venv/
+
+# Local env files (CRITICAL!)
+/backend/.env
+
+# AI Cursor/Devin temp files
+/frontend/.agents/
+/frontend/.claude/
+/frontend/.cursor/
+/frontend/.devin/

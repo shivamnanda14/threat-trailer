@@ -1,0 +1,29 @@
+{
+  "manifest_version": 3,
+  "name": "Threat Trailer",
+  "version": "1.0",
+  "description": "Click the icon or right-click to detonate links in Side Panel.",
+  "permissions": [
+    "contextMenus",
+    "sidePanel",
+    "activeTab"
+  ],
+  "icons": {
+    "16": "icon.png",
+    "48": "icon.png",
+    "128": "icon.png"
+  },
+  "action": {
+    "default_icon": {
+      "16": "icon.png",
+      "48": "icon.png",
+      "128": "icon.png"
+    }
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "side_panel": {
+    "default_path": "sidepanel.html"
+  }
+}
