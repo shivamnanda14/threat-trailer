@@ -288,7 +288,7 @@ export default function ThreatTrailer() {
           <div className="flex flex-wrap justify-center items-center gap-4 mt-12 w-full">
             {/* Primary Button: Get Extension */}
             <a
-              href="GITHUB_WALA_LINK_YAHAN_DAAL"
+              href="https://github.com/shivamnanda14/threat-trailer/releases/tag/v1.0.0"
               target="_blank"
               rel="noopener noreferrer"
               className="whitespace-nowrap inline-flex items-center gap-2 bg-slate-600 hover:bg-slate-500 text-white font-semibold py-3 px-6 rounded-lg transition-colors border border-slate-500"
