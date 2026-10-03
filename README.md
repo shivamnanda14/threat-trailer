@@ -82,3 +82,9 @@ cp .env.example .env
 
 # Run the FastAPI server
 uvicorn main:app --reload
+
+🤝 Contributing
+This is an MVP, and the network is encouraged to break it, test it, and improve it! Feel free to open an issue or submit a pull request if you have ideas for new features or find any bugs.
+
+📄 License
+This project is licensed under the MIT License - see the LICENSE file for details.
